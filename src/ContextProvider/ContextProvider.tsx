@@ -1,7 +1,6 @@
-/* eslint-disable react/prop-types */
 import {
-  GithubAuthProvider,
   GoogleAuthProvider,
+  User,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
   signInWithEmailAndPassword,
@@ -10,64 +9,51 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { createContext, ReactNode, useEffect, useState } from "react";
-import auth from "../Firebase/firebase.config";
-import axios from "axios";
 
-export const AuthContext = createContext(null);
+import auth from "../Firebase/firebase.config";
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const AuthContext = createContext<null | any>(null);
 
 export default function ContextProvider({ children }: { children: ReactNode }) {
-  const githubProvider = new GithubAuthProvider();
   const googleProvider = new GoogleAuthProvider();
 
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [theme, setTheme] = useState("light");
-  const [menu, setMenu] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [theme, setTheme] = useState<string>("light");
+  const [menu, setMenu] = useState<boolean>(false);
+  const [dropdown, setDropdown] = useState<boolean>(false);
 
-  const createUser = (email, password) => {
+  const createUser = (email: string, password: string) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
-  const signInUser = (email, password) => {
+  const signInUser = (email: string, password: string) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
-  const updateUserProfile = (user, update) => {
-    return updateProfile(user, update);
-  };
+
   const googleLogin = () => {
     return signInWithPopup(auth, googleProvider);
   };
 
-  const githubLogin = () => {
-    return signInWithPopup(auth, githubProvider);
+  const updateUserProfile = (
+    user: User,
+    update: { displayName: string }
+  ) => {
+    return updateProfile(user, update);
   };
+
   const logOut = () => {
     return signOut(auth);
   };
 
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-      const userEmail = currentUser?.email || user?.email;
-      const loggedUser = { email: userEmail };
       if (currentUser) {
         setUser(currentUser);
         setLoading(false);
-        //if user exist then issue a token ===============================
-        axios
-          .post("https://online-study-server-ten.vercel.app/jwt", loggedUser, {
-            withCredentials: true,
-          })
-          .then(() => {});
       } else {
         setUser(null);
         setLoading(false);
-        axios
-          .post(
-            "https://online-study-server-ten.vercel.app/logout",
-            loggedUser,
-            { withCredentials: true }
-          )
-          .then(() => {});
       }
     });
 
@@ -76,16 +62,18 @@ export default function ContextProvider({ children }: { children: ReactNode }) {
     };
   }, [user?.email]);
 
+  console.log(user);
+  
+
   const authInfo = {
     user,
     createUser,
     signInUser,
-    updateUserProfile,
     googleLogin,
-    githubLogin,
     logOut,
     loading,
     setUser,
+    updateUserProfile,
     setLoading,
     theme,
     setTheme,

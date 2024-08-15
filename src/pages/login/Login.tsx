@@ -4,15 +4,18 @@ import { FcGoogle } from "react-icons/fc";
 
 import { Fade } from "react-awesome-reveal";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import useAuth from "../../useHooks/useAuth";
+import toast from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
 
 
 export default function Login() {
-//   const location = useLocation();
-//   const navigate = useNavigate();
-//   const { signInUser, googleLogin, user, theme } = useAuth();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { signInUser, googleLogin, user, theme } = useAuth();
   const handleFormSubmit = (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -20,45 +23,44 @@ export default function Login() {
     const password = formData.get('password') as string;
     console.log(email,password);
     
-    // signInUser(email, password)
-    //   .then(() => {
-    //     toast.success("You're in! Welcome back!");
-    //   })
-    //   .catch(() => {
-    //     toast.error("invalid password or email");
-    //   }); 
+    signInUser(email, password)
+      .then(() => {
+        toast.success("You're in! Welcome back!");
+      })
+      .catch(() => {
+        toast.error("invalid password or email");
+      }); 
     e.currentTarget.reset();
   };
 
   const handleGoogleLogin = () => {
-    // googleLogin()
-    //   .then(() => {
-    //     toast.success("You're in! Welcome back!");
-    //   })
-    //   .catch(() => {
-    //     toast.error("Sign-in error. Check connection.");
-    //   });
-    console.log('hi');
+    googleLogin()
+      .then(() => {
+        toast.success("You're in! Welcome back!");
+      })
+      .catch(() => {
+        toast.error("Sign-in error. Check connection.");
+      });
     
   };
 
 
-//   useEffect(() => {
-//     if (user) {
-//      if(location.state){
-//         navigate(location.state);
-//      }else{
-//         navigate('/')
-//      }
-//     }
-//   }, [location.state, navigate, user]);
-const theme = "light"
+  useEffect(() => {
+    if (user) {
+     if(location.state){
+        navigate(location.state);
+     }else{
+        navigate('/')
+     }
+    }
+  }, [location.state, navigate, user]);
 
   return (
     <>
-      {/* <Helmet>
-        <title>TaskBud | Login</title>
-      </Helmet> */}
+      <Helmet>
+        <title>ProdX | Login</title>
+      </Helmet>
+      
       
       <div
         className={`${
