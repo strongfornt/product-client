@@ -1,6 +1,6 @@
 /* eslint-disable no-dupe-keys */
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { IoEyeOutline } from "react-icons/io5";
 import { FaRegEyeSlash } from "react-icons/fa6";
 
@@ -14,9 +14,12 @@ import { Fade } from "react-awesome-reveal";
 // import { MdKeyboardArrowRight } from "react-icons/md";
 import useAuth from "../../useHooks/useAuth";
 import toast, { Toaster } from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
 export default function Register() {
-  const { createUser, updateUserProfile, theme, setUser } = useAuth();
+  const { createUser, updateUserProfile, theme, setUser,user } = useAuth();
   const [passToggle, setPassToggle] = useState(false);
+  const location = useLocation()
+  const navigate = useNavigate()
 
   interface dataType {
     name: string | number;
@@ -64,11 +67,21 @@ export default function Register() {
     reset();
   };
 
+  useEffect(() => {
+    if (user) {
+     if(location.state){
+        navigate(location.state);
+     }else{
+        navigate('/')
+     }
+    }
+  }, [location.state, navigate, user]);
+
   return (
     <>
-      {/* <Helmet>
-        <title>TaskBud | Register</title>
-      </Helmet> */}
+      <Helmet>
+        <title>ProdX | Register</title>
+      </Helmet>
       <Toaster />
       <div
         className={`${

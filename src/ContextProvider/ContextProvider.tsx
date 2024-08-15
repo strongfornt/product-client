@@ -62,7 +62,7 @@ export default function ContextProvider({ children }: { children: ReactNode }) {
     };
   }, [user?.email]);
 
-  console.log(user);
+ 
   
 
   const authInfo = {
