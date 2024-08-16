@@ -1,6 +1,11 @@
+import Banner from "../../components/HomeComponent/Banner/Banner";
 
 export default function Home() {
   return (
-    <div></div>
+    <>
+        {/* banner section start  */}
+        <Banner/>
+        {/* banner section end  */}
+    </>
   )
 }
