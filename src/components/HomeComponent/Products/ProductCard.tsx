@@ -1,8 +1,9 @@
 
-import { Link } from "react-router-dom";
+
+import StarRatings from 'react-star-ratings';
 import { getTime } from "./getTime";
 
-type productsType = {
+interface productsType  {
   _id: string;
   name: string;
   image: string;
@@ -10,15 +11,13 @@ type productsType = {
   price: number;
   category: string;
   brand: string;
-  rating: number;
+  ratings: number;
   createdAt: string;
 };
-
 export default function ProductCard({ product }: { product: productsType }) {
-  //   const { images, category, title, price, description, status , _id } = meal || {};
-  const { name, image, brand, category, rating, price, createdAt } =
+  const { name, image, brand, category, ratings, price, createdAt,description } =
     product || {};
-
+  
   const shortTime = getTime(createdAt);
   return (
     <>
@@ -37,30 +36,38 @@ export default function ProductCard({ product }: { product: productsType }) {
         </div>
         <div className=" ">
           <div className=" px-1 my-1 bg-[#F9F7F7]">
-            
-            <h1 className=" text-base lg:text-lg font-bold text-[#4b5664]  ">
+        
+          <StarRatings
+          rating={ratings}
+          starRatedColor="#ffd700"
+          starEmptyColor="#e4e5e9"
+          starDimension="20px"
+          starSpacing="2px"
+          numberOfStars={5} // specify the number of stars
+        />
+            <h1 className=" text-lg lg:text-lg font-bold text-[#4b5664]  ">
               {name}
             </h1>
-            <h5 className="text-sm  text-[#4b5664] " >
+            <h5 className="text-xs  text-[#4b5664] " >
               Posted: {shortTime} ago
             </h5>
 
             <div className="flex items-center justify-between    bg-[#F9F7F7]">
-              <h1 className="text-lg font-serif text-[#3F72AF]">{category}</h1>
+              <h1 className="text-lg font-serif text-teal-700">{category}</h1>
               <h1 className="text-lg font-mono text-[#4B5664]">${price}</h1>
             </div>
-            <p className="text-[#4b5664] text-sm">description</p>
+            <p className="text-[#4b5664] mb-3 text-sm"> <span className="font-semibold">Description: </span>{description}</p>
           </div>
         </div>
 
-        <div className="flex items-center justify-between px-1  mb-2 bg-[#F9F7F7]">
+        {/* <div className="flex items-center justify-between px-1  mb-2 bg-[#F9F7F7]">
           <Link
             to={`/login`}
-            className="px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-300 transform bg-[#3F72AF] rounded hover:bg-gray-200 hover:text-[#3F72AF] focus:bg-gray-400 focus:outline-none"
+            className="px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-300 transform bg-teal-400 rounded hover:bg-gray-200 hover:text-teal-500 focus:bg-gray-400 focus:outline-none"
           >
             Details
           </Link>
-        </div>
+        </div> */}
       </div>
     </>
   );
