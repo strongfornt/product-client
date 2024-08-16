@@ -22,7 +22,6 @@ export default function NavBar() {
     loading,
     logOut,
     theme,
-    setTheme,
     menu,
     setMenu,
     dropdown,
@@ -61,13 +60,7 @@ export default function NavBar() {
     }
   }, [menu]);
 
-  const handleTheme = (e) => {
-    if (e.target.checked) {
-      setTheme("halloween");
-    } else {
-      setTheme("light");
-    }
-  };
+ 
 
   const responsiveNavLinks = (
     <>

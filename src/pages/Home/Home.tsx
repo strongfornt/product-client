@@ -12,9 +12,9 @@ export default function Home() {
       </section>
       {/* banner section end  */}
       {/* products section start */}
-      <section className="my-12" >
+      <section className="my-12 px-2    md:px-4 lg:px-8" >
         <h1 className="font-semibold text-center text-2xl text-black/85" >Discover Your <span className="text-teal-500" >Perfect Product</span> </h1>
-        <p className="text-center mt-1 font-medium text-black/85" >Browse, Filter, and Find Exactly What You Need.</p>
+        <p className="text-center mt-1 font-medium text-black/85 mb-6 " >Browse, Filter, and Find Exactly What You Need.</p>
         <Products />
       </section>
       {/* products section end */}

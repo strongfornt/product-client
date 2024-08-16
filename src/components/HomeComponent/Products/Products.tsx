@@ -34,7 +34,7 @@ export default function Products() {
   return (
     <div>
       {/* products card will appear the products card component ============ */}
-      <section className="grid grid-cols-4 gap-4" >
+      <section className="grid md:grid-cols-3   xl:grid-cols-4 gap-4" >
     {
       products?.map((product,idx) => (
         <ProductCard key={idx} product={product} />
