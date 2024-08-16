@@ -5,7 +5,6 @@ import { FcGoogle } from "react-icons/fc";
 import { Fade } from "react-awesome-reveal";
 
 import React, { useEffect } from "react";
-import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../useHooks/useAuth";
 import toast from "react-hot-toast";
@@ -62,10 +61,10 @@ export default function Login() {
       </Helmet>
       
       
-      <div
+      {/* <div
         className={`${
           theme === "light" && "bg-[#F7F7F7]"
-        } pt-24 pb-12 space-y-3`}
+        } pt-14 pb-12 space-y-3`}
       >
         <h1
           className={`text-center text-3xl  md:text-4xl font-semibold ${
@@ -74,28 +73,9 @@ export default function Login() {
         >
           Login
         </h1>
-        <div className="flex gap-1 justify-center items-center w-fit mx-auto  relative  ">
-          {/* <Link to="/">
-            <p className={`${theme === "light" ? "text-black/65" : ""}`}>
-              Homepage
-            </p>
-          </Link> */}
-
-          <p
-            className={`text-sm ${
-              theme === "light" ? "text-black/45" : "text-white/55"
-            } flex items-center`}
-          >
-            {" "}
-            <p>
-              <MdKeyboardArrowRight />
-            </p>{" "}
-            Login
-          </p>
-          <span className="inline-flex w-full absolute bg-[#F7F7F7] translate-y-6 h-[1px]" > </span>
-        </div>
-      </div>
-      <section className="flex justify-between mt-5 mb-10">
+        
+      </div> */}
+      <section className="flex  justify-between mt-5 mb-10">
         {/* login site start */}
         <div
           data-aos="fade-up"
@@ -248,9 +228,7 @@ export default function Login() {
                   theme === "light" ? "text-black/55" : "text-white/60"
                 }`}
               >
-                Join a community of curious minds! Sign up today to access
-                engaging content, connect with experts, and embark on a journey
-                of discovery. Start your learning experience now!
+                Welcome back! Log in to explore our curated collection, refine your search, and find exactly what you're looking for with our advanced filtering and sorting tools.
               </p>
 
              <Link

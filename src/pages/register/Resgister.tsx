@@ -13,7 +13,7 @@ import { Fade } from "react-awesome-reveal";
 
 // import { MdKeyboardArrowRight } from "react-icons/md";
 import useAuth from "../../useHooks/useAuth";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import { Helmet } from "react-helmet-async";
 export default function Register() {
   const { createUser, updateUserProfile, theme, setUser,user } = useAuth();
@@ -82,40 +82,8 @@ export default function Register() {
       <Helmet>
         <title>ProdX | Register</title>
       </Helmet>
-      <Toaster />
-      <div
-        className={`${
-          theme === "light" && "bg-[#F7F7F7]"
-        } pt-24 pb-12 space-y-3`}
-      >
-        <h1
-          className={`text-center text-3xl  md:text-4xl font-semibold ${
-            theme === "light" && "text-[#4b5664]"
-          }`}
-        >
-          Register
-        </h1>
-        {/* <div className="flex gap-1 justify-center items-center w-fit mx-auto  relative  ">
-          <Link to="/">
-            <p className={`${theme === "light" ? "text-black/65" : ""}`}>
-              Homepage
-            </p>
-          </Link>
-
-          <p
-            className={`text-sm ${
-              theme === "light" ? "text-black/45" : "text-white/55"
-            } flex items-center`}
-          >
-            {" "}
-            <p>
-              <MdKeyboardArrowRight />
-            </p>{" "}
-            Register
-          </p>
-          <span className="inline-flex w-full absolute bg-[#F7F7F7] translate-y-6 h-[1px]" > </span>
-        </div> */}
-      </div>
+      
+      
       <section className="flex justify-between mt-5 mb-10">
         {/* register side start */}
         <div
@@ -317,10 +285,7 @@ export default function Register() {
                     theme === "light" ? "text-black/55" : "text-white/60"
                   }`}
                 >
-                  Welcome back! If you already have an account, simply log in to
-                  access your personalized dashboard, continue your learning
-                  journey, and connect with our vibrant community of learners.
-                  We&apos;re thrilled to have you back!
+                 Join us today! Sign up to start exploring a wide array of products with powerful search and filter options. Discover the perfect items tailored to your needs.
                 </p>
 
                 <Link to="/login">

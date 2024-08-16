@@ -34,8 +34,8 @@ export default function Banner() {
         className=" w-full"
       >
         <SwiperSlide className="">
-          <div className=" slide slide1  h-[100vh]  md:h-[94vh]    ">
-            <div className="w-full bg-black/65   h-full flex items-center justify-center ">
+          <div className=" slide slide1  min-h-screen      ">
+            <div className="w-full bg-black/65  min-h-screen  flex items-center justify-center ">
               <div className="text-white space-y-4">
                 <Fade
                   direction="up"
@@ -56,8 +56,8 @@ export default function Banner() {
           </div>
         </SwiperSlide>
         <SwiperSlide className="">
-          <div className=" slide slide2   h-[100vh] md:h-[94vh]        ">
-            <div className="w-full bg-black/65   h-full flex items-center justify-center ">
+          <div className=" slide slide2   min-h-screen       ">
+            <div className="w-full bg-black/65 min-h-screen   flex items-center justify-center ">
               <div className="text-white space-y-4">
                 <Fade
                   direction="up"
@@ -78,8 +78,8 @@ export default function Banner() {
           </div>
         </SwiperSlide>
         <SwiperSlide className="">
-          <div className=" slide slide3    h-[100vh]  md:h-[94vh]    ">
-            <div className="w-full bg-black/55   h-full flex items-center justify-center ">
+          <div className=" slide slide3    min-h-screen     ">
+            <div className="w-full bg-black/55   min-h-screen flex items-center justify-center ">
               <div className="text-white space-y-4">
                 <Fade
                   direction="up"
