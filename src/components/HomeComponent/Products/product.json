@@ -1,0 +1,403 @@
+[
+    {
+      "name": "iPhone 14 Pro Max",
+      "image": "https://images.pexels.com/photos/13341771/pexels-photo-13341771.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "description": "Apple’s latest flagship with an A16 Bionic chip, ProMotion display, and advanced camera system.",
+      "price": 1099.99,
+      "category": "Electronics",
+      "brand": "Apple",
+      "ratings": 4.8,
+      "createdAt": "2024-08-01T10:00:00"
+    },
+    {
+      "name": "Samsung Galaxy S22 Ultra",
+      "image": "https://images.pexels.com/photos/20348034/pexels-photo-20348034/free-photo-of-camera-lenses-of-samsung-galaxy-s24.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "description": "High-end smartphone with a 108MP camera, S Pen support, and a large AMOLED display.",
+      "price": 1199.99,
+      "category": "Electronics",
+      "brand": "Samsung",
+      "ratings": 4.7,
+      "createdAt": "2024-07-20T12:00:00"
+    },
+    {
+      "name": "Sony WH-1000XM5",
+      "image": "https://images.pexels.com/photos/21022/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600",
+      "description": "Industry-leading noise-canceling headphones with exceptional sound quality and comfort.",
+      "price": 349.99,
+      "category": "Electronics",
+      "brand": "Sony",
+      "ratings": 4.9,
+      "createdAt": "2024-06-15T14:30:00"
+    },
+    {
+      "name": "Nespresso VertuoPlus",
+      "image": "https://images.pexels.com/photos/9572781/pexels-photo-9572781.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "description": "Coffee machine with a wide range of coffee options and a sleek design.",
+      "price": 229.99,
+      "category": "Kitchen Appliances",
+      "brand": "Nespresso",
+      "ratings": 4.8,
+      "createdAt": "2024-07-05T09:15:00"
+    },
+    {
+      "name": "Fitbit Charge 5",
+      "image": "https://images.pexels.com/photos/267394/pexels-photo-267394.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "description": "Advanced fitness tracker with GPS, heart rate monitoring, and stress management features.",
+      "price": 179.99,
+      "category": "Wearables",
+      "brand": "Fitbit",
+      "ratings": 4.7,
+      "createdAt": "2024-06-22T11:45:00"
+    },
+    {
+      "name": "Tarte Shape Tape Concealer",
+      "image": "https://media.allure.com/photos/5841b4358364a4b17ac4c651/4:3/w_1199,h_899,c_limit/Screen%20Shot%202016-12-02%20at%2012.48.50%20PM.png",
+      "description": "Full-coverage concealer with a creamy texture and a matte finish.",
+      "price": 30.00,
+      "category": "Cosmetics",
+      "brand": "Tarte",
+      "ratings": 4.6,
+      "createdAt": "2024-07-10T16:20:00"
+    },
+    {
+      "name": "Night Repair Serum",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzUU3VAb3fLYt0FkAKy9vwVyKsR6puza9Ljw&s",
+      "description": "Anti-aging serum with a patented repair technology for radiant and youthful skin.",
+      "price": 105.00,
+      "category": "Cosmetics",
+      "brand": "Estée Lauder",
+      "ratings": 4.8,
+      "createdAt": "2024-08-05T13:00:00"
+    },
+    {
+      "name": "Dyson V15 Detect",
+      "image": "https://i.rtings.com/assets/products/HNLvSTNO/dyson-v15-detect/design-medium.jpg?format=auto",
+      "description": "Cordless vacuum with laser technology to reveal microscopic dust and powerful suction.",
+      "price": 699.99,
+      "category": "Home Appliances",
+      "brand": "Dyson",
+      "ratings": 4.9,
+      "createdAt": "2024-07-30T10:10:00"
+    },
+    {
+      "name": "Bose QuietComfort 45",
+      "image": "https://www.digitaltrends.com/wp-content/uploads/2021/10/bose-quietcomfort-45-review-00022.jpg?p=1",
+      "description": "Noise-canceling headphones with high-fidelity audio and comfortable design.",
+      "price": 329.99,
+      "category": "Electronics",
+      "brand": "Bose",
+      "ratings": 4.8,
+      "createdAt": "2024-06-18T09:50:00"
+    },
+    {
+      "name": "L’Oreal Paris Revitalift Serum",
+      "image": "https://cdn.mos.cms.futurecdn.net/UxcH2J8Wde7xD6xy7frCGM.jpg",
+      "description": "Anti-aging serum that reduces wrinkles and improves skin texture with hyaluronic acid.",
+      "price": 34.99,
+      "category": "Cosmetics",
+      "brand": "L’Oreal Paris",
+      "ratings": 4.7,
+      "createdAt": "2024-08-01T15:30:00"
+    },
+    {
+      "name": "Nest Learning Thermostat",
+      "image": "https://example.com/images/nestthermostat.jpg",
+      "description": "Smart thermostat that learns your schedule and helps save energy.",
+      "price": 249.99,
+      "category": "Smart Home",
+      "brand": "Nest",
+      "ratings": 4.8,
+      "createdAt": "2024-06-20T12:00:00"
+    },
+    {
+      "name": "Instant Pot Duo 7-in-1",
+      "image": "https://example.com/images/instantpotduo.jpg",
+      "description": "Multi-cooker with 7 cooking functions, including pressure cook, slow cook, and sauté.",
+      "price": 89.99,
+      "category": "Kitchen Appliances",
+      "brand": "Instant Pot",
+      "ratings": 4.7,
+      "createdAt": "2024-07-25T11:45:00"
+    },
+    {
+      "name": "GoPro Hero 10",
+      "image": "https://example.com/images/goprohero10.jpg",
+      "description": "Action camera with 5.3K video resolution, advanced stabilization, and waterproof design.",
+      "price": 399.99,
+      "category": "Cameras",
+      "brand": "GoPro",
+      "ratings": 4.8,
+      "createdAt": "2024-06-08T10:20:00"
+    },
+    {
+      "name": "Canon EOS R6",
+      "image": "https://example.com/images/canoneosr6.jpg",
+      "description": "Mirrorless camera with a 20MP full-frame sensor, 4K video, and fast autofocus.",
+      "price": 2499.99,
+      "category": "Cameras",
+      "brand": "Canon",
+      "ratings": 4.9,
+      "createdAt": "2024-07-15T14:10:00"
+    },
+    {
+      "name": "Apple AirPods Pro",
+      "image": "https://example.com/images/appleairpodspro.jpg",
+      "description": "Wireless earbuds with active noise cancellation, transparency mode, and spatial audio.",
+      "price": 249.99,
+      "category": "Electronics",
+      "brand": "Apple",
+      "ratings": 4.8,
+      "createdAt": "2024-08-10T11:00:00"
+    },
+    {
+      "name": "Samsung QLED 4K TV",
+      "image": "https://example.com/images/samsungqled4k.jpg",
+      "description": "4K QLED TV with Quantum HDR and vibrant color accuracy for a stunning viewing experience.",
+      "price": 899.99,
+      "category": "Electronics",
+      "brand": "Samsung",
+      "ratings": 4.7,
+      "createdAt": "2024-06-25T13:15:00"
+    },
+    {
+      "name": "JBL Charge 5",
+      "image": "https://example.com/images/jblcharge5.jpg",
+      "description": "Portable Bluetooth speaker with waterproof design and up to 20 hours of playtime.",
+      "price": 149.99,
+      "category": "Audio",
+      "brand": "JBL",
+      "ratings": 4.6,
+      "createdAt": "2024-07-05T10:30:00"
+    },
+    {
+      "name": "Philips Sonicare DiamondClean",
+      "image": "https://example.com/images/philipsdiamondclean.jpg",
+      "description": "Electric toothbrush with smart sensor guidance for a thorough clean and improved gum health.",
+      "price": 229.99,
+      "category": "Personal Care",
+      "brand": "Philips",
+      "ratings": 4.9,
+      "createdAt": "2024-06-30T12:40:00"
+    },
+    {
+      "name": "Ooni Koda Pizza Oven",
+      "image": "https://example.com/images/oonikoda.jpg",
+      "description": "Gas-powered pizza oven with rapid heat-up and perfect for making high-quality pizzas at home.",
+      "price": 299.99,
+      "category": "Kitchen Appliances",
+      "brand": "Ooni",
+      "ratings": 4.8,
+      "createdAt": "2024-07-20T11:20:00"
+    },
+    {
+      "name": "Harman Kardon Onyx Studio 6",
+      "image": "https://example.com/images/harmanonyx.jpg",
+      "description": "Bluetooth speaker with powerful sound and a stylish design, perfect for high-quality audio on the go.",
+      "price": 249.99,
+      "category": "Audio",
+      "brand": "Harman Kardon",
+      "ratings": 4.7,
+      "createdAt": "2024-07-15T14:50:00"
+    },
+    {
+      "name": "Ring Video Doorbell 4",
+      "image": "https://example.com/images/ringdoorbell4.jpg",
+      "description": "Smart doorbell with 1080p video, two-way audio, and advanced motion detection for enhanced home security.",
+      "price": 199.99,
+      "category": "Smart Home",
+      "brand": "Ring",
+      "ratings": 4.8,
+      "createdAt": "2024-08-05T13:40:00"
+    },
+    {
+      "name": "TCL 6-Series 55” TV",
+      "image": "https://example.com/images/tcl55.jpg",
+      "description": "55-inch 4K UHD TV with Quantum Dot technology for vibrant colors and sharp details.",
+      "price": 799.99,
+      "category": "Electronics",
+      "brand": "TCL",
+      "ratings": 4.8,
+      "createdAt": "2024-07-10T10:00:00"
+    },
+    {
+      "name": "Corsair K95 RGB Platinum",
+      "image": "https://example.com/images/corsairk95.jpg",
+      "description": "High-performance gaming keyboard with customizable RGB backlighting and macro keys.",
+      "price": 199.99,
+      "category": "Computers",
+      "brand": "Corsair",
+      "ratings": 4.8,
+      "createdAt": "2024-06-12T11:30:00"
+    },
+    {
+      "name": "Herman Miller Aeron Chair",
+      "image": "https://example.com/images/hermanmiller.jpg",
+      "description": "Ergonomic office chair with breathable mesh and adjustable features for long hours of work.",
+      "price": 1399.99,
+      "category": "Furniture",
+      "brand": "Herman Miller",
+      "ratings": 4.9,
+      "createdAt": "2024-07-05T09:20:00"
+    },
+    {
+      "name": "Nest Cam Outdoor",
+      "image": "https://example.com/images/nestcam.jpg",
+      "description": "Weatherproof security camera with high-definition video, night vision, and motion alerts.",
+      "price": 199.99,
+      "category": "Smart Home",
+      "brand": "Nest",
+      "ratings": 4.7,
+      "createdAt": "2024-07-12T14:00:00"
+    },
+    {
+      "name": "Sennheiser HD 660S",
+      "image": "https://example.com/images/sennheiserhd660s.jpg",
+      "description": "Open-back headphones with exceptional sound quality and comfortable fit.",
+      "price": 299.99,
+      "category": "Audio",
+      "brand": "Sennheiser",
+      "ratings": 4.9,
+      "createdAt": "2024-06-25T13:30:00"
+    },
+    {
+      "name": "Canon EOS R6",
+      "image": "https://example.com/images/canoneosr6.jpg",
+      "description": "Mirrorless camera with a 20MP full-frame sensor, 4K video, and fast autofocus.",
+      "price": 2499.99,
+      "category": "Cameras",
+      "brand": "Canon",
+      "ratings": 4.9,
+      "createdAt": "2024-07-07T10:50:00"
+    },
+    {
+      "name": "Kindle Paperwhite",
+      "image": "https://example.com/images/kindlepaperwhite.jpg",
+      "description": "E-reader with a high-resolution display, built-in light, and waterproof design.",
+      "price": 129.99,
+      "category": "Electronics",
+      "brand": "Amazon",
+      "ratings": 4.8,
+      "createdAt": "2024-08-02T14:20:00"
+    },
+    {
+      "name": "Olay Regenerist Micro-Sculpting Cream",
+      "image": "https://example.com/images/olayregenerist.jpg",
+      "description": "Anti-aging cream with hyaluronic acid and amino-peptides to hydrate and firm the skin.",
+      "price": 34.99,
+      "category": "Cosmetics",
+      "brand": "Olay",
+      "ratings": 4.7,
+      "createdAt": "2024-06-15T16:00:00"
+    },
+    {
+      "name": "Huda Beauty Rose Gold Palette",
+      "image": "https://example.com/images/hudabeautyrose.jpg",
+      "description": "Eyeshadow palette with 18 shades in matte, shimmer, and foil finishes for versatile looks.",
+      "price": 65.00,
+      "category": "Cosmetics",
+      "brand": "Huda Beauty",
+      "ratings": 4.8,
+      "createdAt": "2024-07-28T11:00:00"
+    },
+    {
+      "name": "La Roche-Posay Anthelios Sunscreen",
+      "image": "https://example.com/images/larocheposay.jpg",
+      "description": "Broad-spectrum sunscreen with SPF 60, suitable for sensitive skin and providing high protection.",
+      "price": 36.00,
+      "category": "Cosmetics",
+      "brand": "La Roche-Posay",
+      "ratings": 4.7,
+      "createdAt": "2024-06-05T15:30:00"
+    },
+    {
+      "name": "Oral-B Genius X",
+      "image": "https://example.com/images/oralbgeniusx.jpg",
+      "description": "Electric toothbrush with artificial intelligence for personalized brushing guidance and 3D cleaning action.",
+      "price": 299.99,
+      "category": "Personal Care",
+      "brand": "Oral-B",
+      "ratings": 4.8,
+      "createdAt": "2024-07-22T13:20:00"
+    },
+    {
+      "name": "Jabra Elite 75t",
+      "image": "https://example.com/images/jabraelite75t.jpg",
+      "description": "Compact true wireless earbuds with noise cancellation and long battery life.",
+      "price": 179.99,
+      "category": "Electronics",
+      "brand": "Jabra",
+      "ratings": 4.7,
+      "createdAt": "2024-06-30T12:40:00"
+    },
+    {
+      "name": "Bose SoundLink Flex",
+      "image": "https://example.com/images/bosesoundlinkflex.jpg",
+      "description": "Portable Bluetooth speaker with rugged design and 12-hour battery life, offering high-quality sound.",
+      "price": 129.99,
+      "category": "Audio",
+      "brand": "Bose",
+      "ratings": 4.6,
+      "createdAt": "2024-07-18T11:10:00"
+    },
+    {
+      "name": "Revlon One-Step Hair Dryer",
+      "image": "https://example.com/images/revlonhairdryer.jpg",
+      "description": "Hair dryer and volumizer in one, designed to create salon-quality results with less effort.",
+      "price": 59.99,
+      "category": "Personal Care",
+      "brand": "Revlon",
+      "ratings": 4.7,
+      "createdAt": "2024-06-12T14:00:00"
+    },
+    {
+      "name": "Dell XPS 13",
+      "image": "https://example.com/images/dellxps13.jpg",
+      "description": "Ultrabook with a 13.4-inch InfinityEdge display, Intel Core i7 processor, and premium build quality.",
+      "price": 1299.99,
+      "category": "Computers",
+      "brand": "Dell",
+      "ratings": 4.8,
+      "createdAt": "2024-07-08T12:20:00"
+    },
+    {
+      "name": "Apple MacBook Pro 16\"",
+      "image": "https://example.com/images/macbookpro16.jpg",
+      "description": "High-performance laptop with an M1 Pro chip, 16-inch Retina display, and advanced cooling system.",
+      "price": 2499.99,
+      "category": "Computers",
+      "brand": "Apple",
+      "ratings": 4.9,
+      "createdAt": "2024-08-01T13:15:00"
+    },
+    {
+      "name": "Acer Predator Helios 300",
+      "image": "https://example.com/images/acerpredatorhelios300.jpg",
+      "description": "Gaming laptop with Intel Core i7, NVIDIA GeForce RTX graphics, and high-refresh-rate display.",
+      "price": 1399.99,
+      "category": "Computers",
+      "brand": "Acer",
+      "ratings": 4.8,
+      "createdAt": "2024-07-10T10:45:00"
+    },
+    {
+      "name": "KitchenAid Stand Mixer",
+      "image": "https://example.com/images/kitchenaidmixer.jpg",
+      "description": "Versatile stand mixer with a powerful motor and a range of attachments for baking and cooking.",
+      "price": 379.99,
+      "category": "Kitchen Appliances",
+      "brand": "KitchenAid",
+      "ratings": 4.9,
+      "createdAt": "2024-06-25T15:00:00"
+    },
+    {
+      "name": "Nikon D850",
+      "image": "https://example.com/images/nikond850.jpg",
+      "description": "Full-frame DSLR camera with a 45.7MP sensor, 4K UHD video, and robust build quality.",
+      "price": 2799.99,
+      "category": "Cameras",
+      "brand": "Nikon",
+      "ratings": 4.8,
+      "createdAt": "2024-07-12T11:30:00"
+    }
+
+]

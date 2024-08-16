@@ -195,7 +195,7 @@ export default function Login() {
                 }`}
               >
                 Don't have an account yet?
-                <Link to={'/'} className="underline text-teal-300">
+                <Link to={'/register'} className="underline text-teal-300">
                   Create One
                 </Link>
               </p>
