@@ -22,7 +22,7 @@ export default function Products() {
   const [name, setName] = useState("");
   const [brand, setBrand] = useState("");
   const [category, setCategory] = useState("");
-  const [filterOption, setFilterOption] = useState('')
+  const [sortBy, setSortBy] = useState('')
   const [priceRange, setPriceRange] = useState("");
 
   const [products, setProducts] = useState<productsType>([] as productsType);
@@ -30,7 +30,7 @@ export default function Products() {
   useEffect(() => {
     const getProducts = async () => {
       const { data } = await axios.get(
-        `http://localhost:5000/products?page=${currentPage}&size=${itemPerPages}&name=${name}&brand=${brand}&category=${category}`
+        `http://localhost:5000/products?page=${currentPage}&size=${itemPerPages}&name=${name}&brand=${brand}&category=${category}&sortBy=${sortBy}`
       );
       setProducts(data);
     };
@@ -42,7 +42,7 @@ export default function Products() {
     };
     getProducts();
     getCount();
-  }, [currentPage, itemPerPages, name, brand,category]);
+  }, [currentPage, itemPerPages, name, brand,category,sortBy]);
 
   //count the total documents ============
 
@@ -71,7 +71,7 @@ export default function Products() {
           <select
             onChange={(e) => {
               setCategory("");
-              setPriceRange(e.target.value);
+              setSortBy(e.target.value);
             }}
             defaultValue="default"
             className="px-4 py-1  border cursor-pointer ring-1 ring-[#3F72AF] outline-none rounded-md "
@@ -82,8 +82,8 @@ export default function Products() {
               Short By price/date
             </option>
             {/* <option value={4}>Less then $4</option> */}
-            <option value='price-desc'>Price: Low to High</option>
-            <option value='price-asc'>Price: High to Low</option>
+            <option value='price-asc'>Price: Low to High</option>
+            <option value='price-desc'>Price: High to Low</option>
             <option value='date-desc'>Date: Newest first</option>
           </select>
 
@@ -228,6 +228,7 @@ export default function Products() {
                 setPriceRange("");
                 setBrand('')
                 setName("");
+                setSortBy('')
               }}
               className="px-4 py-1 bg-[#3F72AF] text-white rounded-md hover:bg-[#4a83c9] duration-300 font-medium"
             >
