@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from "react-router-dom";
-import Nav from "../shared/Navbar/Nav";
+
 import NavBar from "../shared/Navbar/Navbar";
+import Footer from "../shared/Footer/Footer";
 
 
 
@@ -17,6 +18,10 @@ export default function RootLayout() {
     <main>
         <Outlet/>
     </main>
+
+    <footer>
+        <Footer/>
+    </footer>
    </section>
   )
 }
