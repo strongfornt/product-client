@@ -37,7 +37,7 @@ export default function ContextProvider({ children }: { children: ReactNode }) {
 
   const updateUserProfile = (
     user: User,
-    update: { displayName: string }
+    update: { displayName: string , photoURL: string}
   ) => {
     return updateProfile(user, update);
   };
@@ -62,6 +62,7 @@ export default function ContextProvider({ children }: { children: ReactNode }) {
     };
   }, [user?.email]);
 
+ 
  
   
 

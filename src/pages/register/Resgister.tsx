@@ -16,13 +16,14 @@ import useAuth from "../../useHooks/useAuth";
 import toast from "react-hot-toast";
 import { Helmet } from "react-helmet-async";
 export default function Register() {
-  const { createUser, updateUserProfile, theme, setUser,user } = useAuth();
+  const { createUser, updateUserProfile, theme, setUser, user } = useAuth();
   const [passToggle, setPassToggle] = useState(false);
-  const location = useLocation()
-  const navigate = useNavigate()
+  const location = useLocation();
+  const navigate = useNavigate();
 
   interface dataType {
     name: string | number;
+    photo: string;
     email: string | number;
     password: string | number;
   }
@@ -36,7 +37,7 @@ export default function Register() {
   } = useForm<dataType>();
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const validatePassword = (password: any ) => {
+  const validatePassword = (password: any) => {
     if (!/[A-Z]/.test(password)) {
       return "Missing Uppercase letters in your password!";
     }
@@ -48,7 +49,7 @@ export default function Register() {
   };
 
   const formSubmit: SubmitHandler<dataType> = (data) => {
-    const { name, email, password } = data;
+    const { name, email, password, photo } = data;
     createUser(email, password)
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .then((users: any) => {
@@ -59,7 +60,7 @@ export default function Register() {
           displayName: name,
         })
           .then(() => {
-            setUser({ ...user, displayName: name });
+            setUser({ ...user, displayName: name, photoURL: photo });
           })
           .catch(() => {});
       })
@@ -69,11 +70,11 @@ export default function Register() {
 
   useEffect(() => {
     if (user) {
-     if(location.state){
+      if (location.state) {
         navigate(location.state);
-     }else{
-        navigate('/')
-     }
+      } else {
+        navigate("/");
+      }
     }
   }, [location.state, navigate, user]);
 
@@ -82,8 +83,7 @@ export default function Register() {
       <Helmet>
         <title>ProdX | Register</title>
       </Helmet>
-      
-      
+
       <section className="flex justify-between mt-5 mb-10">
         {/* register side start */}
         <div
@@ -143,7 +143,7 @@ export default function Register() {
                     data-aos-duration="1000"
                   >
                     <label htmlFor="email" className="block mb-2 text-sm">
-                      Name
+                      Name*
                     </label>
                     <input
                       {...register("name")}
@@ -155,30 +155,30 @@ export default function Register() {
                       className="w-full px-3 py-2 border rounded-md border-gray-300 bg-transparent outline-none focus:ring-1 focus:ring-teal-300"
                     />
                   </div>
-                  {/* <div
-                data-aos="zoom-in"
-                data-aos-delay="500 "
-                data-aos-duration="1000"
-              >
-                <label htmlFor="email" className="block mb-2 text-sm">
-                  Photo Url
-                </label>
-                <input
-                  {...register("photo")}
-                  type="text"
-                  name="photo"
-                  id="photo"
-                  placeholder="photo url"
-                  className="w-full px-3 py-2 border rounded-md border-gray-300  bg-transparent  outline-none focus:ring-1 focus:ring-teal-300 "
-                />
-              </div> */}
                   <div
                     data-aos="zoom-in"
                     data-aos-delay="500 "
                     data-aos-duration="1000"
                   >
                     <label htmlFor="email" className="block mb-2 text-sm">
-                      Email address
+                      Photo Url(Optional)
+                    </label>
+                    <input
+                      {...register("photo")}
+                      type="text"
+                      name="photo"
+                      id="photo"
+                      placeholder="photo url"
+                      className="w-full px-3 py-2 border rounded-md border-gray-300  bg-transparent  outline-none focus:ring-1 focus:ring-teal-300 "
+                    />
+                  </div>
+                  <div
+                    data-aos="zoom-in"
+                    data-aos-delay="500 "
+                    data-aos-duration="1000"
+                  >
+                    <label htmlFor="email" className="block mb-2 text-sm">
+                      Email address*
                     </label>
                     <input
                       {...register("email")}
@@ -198,7 +198,7 @@ export default function Register() {
                   >
                     <div className="flex justify-between mb-2">
                       <label htmlFor="password" className="text-sm">
-                        Password
+                        Password*
                       </label>
                     </div>
                     <input
@@ -285,7 +285,9 @@ export default function Register() {
                     theme === "light" ? "text-black/55" : "text-white/60"
                   }`}
                 >
-                 Join us today! Sign up to start exploring a wide array of products with powerful search and filter options. Discover the perfect items tailored to your needs.
+                  Join us today! Sign up to start exploring a wide array of
+                  products with powerful search and filter options. Discover the
+                  perfect items tailored to your needs.
                 </p>
 
                 <Link to="/login">

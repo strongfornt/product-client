@@ -19,7 +19,7 @@ export default function RootLayout() {
         <Outlet/>
     </main>
 
-    <footer>
+    <footer  className={` ${location.pathname === '/login' && 'hidden' || location.pathname === '/register' && 'hidden'}`}>
         <Footer/>
     </footer>
    </section>

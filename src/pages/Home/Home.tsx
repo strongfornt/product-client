@@ -2,7 +2,9 @@ import { Helmet } from "react-helmet-async";
 import Banner from "../../components/HomeComponent/Banner/Banner";
 import Products from "../../components/HomeComponent/Products/Products";
 
+
 export default function Home() {
+  
   return (
     <>
       <Helmet>ProdX | Products</Helmet>
@@ -10,6 +12,7 @@ export default function Home() {
       <section>
         <Banner />
       </section>
+      
       {/* banner section end  */}
       {/* products section start */}
       <section className="my-12 px-2    md:px-4 lg:px-8" >
